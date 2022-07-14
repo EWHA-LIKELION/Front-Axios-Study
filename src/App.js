@@ -7,7 +7,6 @@ function App() {
   const [posts, setPosts] = useState([]);
   const [singlePost, setSinglePost] = useState({});
   const [comments, setComments] = useState([]);
-  const [loading, isLoading] = useState(false);
 
   const id = 15;
 
