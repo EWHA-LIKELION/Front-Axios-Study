@@ -28,14 +28,12 @@ function App() {
   };
 
   const getSinglePost = async () => {
-    isLoading(true);
     const response = await axios
       .get(`https://dy6578.pythonanywhere.com/api/posts/${id}`)
       .then(response => {
         console.log("글 하나 불러오기 성공", response.data);
         setSinglePost(response.data);
         setComments([...response.data.comment]);
-        isLoading(false);
       })
       .catch(error => {
         console.log("글 하나 불러오기 실패");
